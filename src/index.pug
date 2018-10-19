@@ -1,0 +1,46 @@
+-
+    var slideTitles = {
+        "slide1": 'Всегда ли цели терапии СД2 на поверхности?',
+        "slide2": 'Основа терапии - патогенез СД2',
+        "carouselSlide1": 'Звенья патогенеза СД2',
+        "carouselSlide2": 'Смертельный октет',
+        "carouselSlide3": 'Звенья патогенеза СД2'
+    };
+    var slideOneGoals = {
+        goal1: { name: 'Цель по HbA1c', pointerSize: 'l' },
+        goal2: { name: 'Гипогликемия', pointerSize: 'm' },
+        goal3: { name: 'Осложнения СД', pointerSize: 's' },
+        goal4: { name: 'СС риски', pointerSize: 's' }
+    };
+
+include slide/slide
+include carousel/carousel
+include goal/goal
+include next-slide/next-slide
+include pagination/pagination
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{htmlWebpackPlugin.options.title}
+    body
+        +slide
+            +slide__title(slideTitles["slide1"])
+            each item in slideOneGoals
+                +goal(item.name, item.pointerSize)
+            +next-slide
+        +slide
+            +slide__title(slideTitles["slide2"])
+        +carousel
+            +slide
+                +slide__title(slideTitles["carouselSlide1"])
+            +slide
+                +slide__title(slideTitles["carouselSlide2"])
+            +slide
+                +slide__title(slideTitles["carouselSlide3"])
+        +pagination
+            +pagination__circle(true)
+            +pagination__circle(false)
+            +pagination__circle(false)

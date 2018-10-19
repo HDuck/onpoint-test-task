@@ -1,0 +1,7 @@
+include goal__name
+include goal__pointer
+
+mixin goal(name, pointSize)
+    .goal
+        +goal__name(name)
+        +goal__pointer(pointSize)
