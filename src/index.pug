@@ -1,10 +1,10 @@
 -
-    var slideTitles = {
-        "slide1": 'Всегда ли цели терапии СД2 на поверхности?',
-        "slide2": 'Основа терапии - патогенез СД2',
-        "carouselSlide1": 'Звенья патогенеза СД2',
-        "carouselSlide2": 'Смертельный октет',
-        "carouselSlide3": 'Звенья патогенеза СД2'
+    var titles = {
+        slide1: { name: 'Всегда ли цели терапии СД2 на поверхности?', size: 'l', position: 'top-left' },
+        slide2: { name: 'Основа терапии - патогенез СД2', size: 'l', position: 'center' },
+        tab1: { name: 'Звенья патогенеза СД2', size: 'm', position: 'top-left' },
+        tab2: { name: 'Смертельный октет', size: 'm', position: 'top-left' },
+        tab3: { name: 'Звенья патогенеза СД2', size: 'm', position: 'top-left' }
     };
     var slideOneGoals = {
         goal1: { name: 'Цель по HbA1c', pointerSize: 'l' },
@@ -14,6 +14,7 @@
     };
 
 include slide/slide
+include title/title
 include carousel/carousel
 include goal/goal
 include next-slide/next-slide
@@ -27,19 +28,19 @@ html(lang="en")
         title #{htmlWebpackPlugin.options.title}
     body
         +slide
-            +slide__title(slideTitles["slide1"])
+            +title(titles.slide1.name, titles.slide1.size, titles.slide1.position)
             each item in slideOneGoals
                 +goal(item.name, item.pointerSize)
             +next-slide
         +slide
-            +slide__title(slideTitles["slide2"])
+            +title(titles.slide2.name, titles.slide2.size, titles.slide2.position)
         +carousel
             +slide
-                +slide__title(slideTitles["carouselSlide1"])
+                +title(titles.tab1.name, titles.tab1.size, titles.tab1.position)
             +slide
-                +slide__title(slideTitles["carouselSlide2"])
+                +title(titles.tab2.name, titles.tab2.size, titles.tab2.position)
             +slide
-                +slide__title(slideTitles["carouselSlide3"])
+                +title(titles.tab3.name, titles.tab3.size, titles.tab3.position)
         +pagination
             +pagination__circle(true)
             +pagination__circle(false)
