@@ -1,0 +1,10 @@
+.slide_bg_mountain-refl {
+    background: blue no-repeat;
+    background-image:
+        url('./slide/bg_slide-icecube1.png'),
+        url('./slide/bg_slide-icecube2.png'),
+        url('./slide/bg_slide-icecube3.png'),
+        url('./slide/bg_slide-icecube4.png'),
+        url('./slide/bg_mountain-refl.png');
+    background-position: right 5.8%, 25% 66.5%, 8.2% 22%, 75% 84.5%, center;
+}

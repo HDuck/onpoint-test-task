@@ -1,0 +1,20 @@
+.slide_bg_deepblue1 {
+    background: blue url('./slide/bg_deepblue.png') no-repeat center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        background: transparent no-repeat;
+        background-image:
+            url('./slide/bg_tab-icecube1.png'),
+            url('./slide/bg_tab-icecube2.png'),
+            url('./slide/bg_tab-icecube3.png');
+        background-position: 3% 99%, 92.5% 15.5%, 72.5% 34%;
+        opacity: .4;        
+    }
+}

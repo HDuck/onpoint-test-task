@@ -1,6 +1,11 @@
-@import 'slide__title';
-
 .slide {
-    width: 1024px;
+    position: relative;
+    width: 100%;
     height: 768px;
 }
+
+@import 'slide_bg_mountain';
+@import 'slide_bg_mountain-refl';
+@import 'slide_bg_deepblue1';
+@import 'slide_bg_deepblue2';
+@import 'slide_bg_deepblue3';

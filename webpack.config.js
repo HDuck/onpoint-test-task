@@ -29,9 +29,7 @@ module.exports = {
                 test: /\.pug$/,
                 use: [{
                     loader: "pug-loader",
-                    options: {
-                        pretty: true
-                    }
+                    options: { pretty: true }
                 }]
             },
             {
@@ -48,7 +46,8 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[path][name].[ext]',
-                        publicPath: '../'
+                        outputPath: './img',
+                        publicPath: '../img'
                     }
                 }
             },
@@ -63,6 +62,10 @@ module.exports = {
                 }
             },
         ]
+    },
+    watch: true,
+    watchOptions: {
+        ignored: /node_modules/
     },
     devServer: {
         contentBase: './dist',

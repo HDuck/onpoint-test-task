@@ -1,4 +1,8 @@
 -
+    // Slides bg images
+
+    var slideBg = ['mountain', 'mountain-refl', 'deepblue1', 'deepblue2', 'deepblue3'];
+    
     // Titles by slides/tabs
     
     var titles = {
@@ -161,16 +165,16 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title #{htmlWebpackPlugin.options.title}
-    body
-        +slide
+    body.container
+        +slide(slideBg[0])
             +title(titles.slide1.name, titles.slide1.size, titles.slide1.position)
             each item in slideOneGoals
                 +goal(item.name, item.pointerSize)
             +next-slide
-        +slide
+        +slide(slideBg[1])
             +title(titles.slide2.name, titles.slide2.size, titles.slide2.position)
         +carousel
-            +slide
+            +slide(slideBg[2])
                 +title(titles.tab1.name, titles.tab1.size, titles.tab1.position)
                 +grid-layout
                     - var elemCounter = 0;
@@ -184,7 +188,7 @@ html(lang="en")
                                     else if (item2.type === 'double')
                                         +arrows__item-double(item2.dir, item2.len)
                     +hyperglycemia(true)
-            +slide
+            +slide(slideBg[3])
                 +title(titles.tab2.name, titles.tab2.size, titles.tab2.position)
                 +grid-layout
                     - var elemCounter = 0;
@@ -198,7 +202,7 @@ html(lang="en")
                                     else if (item2.type === 'double')
                                         +arrows__item-double(item2.dir, item2.len)
                     +hyperglycemia(true)
-            +slide
+            +slide(slideBg[4])
                 +title(titles.tab3.name, titles.tab3.size, titles.tab3.position)
                 +grid-layout
                     - var elemCounter = 0;
