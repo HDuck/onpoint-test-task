@@ -1,4 +1,6 @@
 -
+    // Titles by slides/tabs
+    
     var titles = {
         slide1: { name: 'Всегда ли цели терапии СД2 на поверхности?', size: 'l', position: 'top-left' },
         slide2: { name: 'Основа терапии - патогенез СД2', size: 'l', position: 'center' },
@@ -6,11 +8,138 @@
         tab2: { name: 'Смертельный октет', size: 'm', position: 'top-left' },
         tab3: { name: 'Звенья патогенеза СД2', size: 'm', position: 'top-left' }
     };
+
+    // Goals from top to bottom, left to right
+
     var slideOneGoals = {
         goal1: { name: 'Цель по HbA1c', pointerSize: 'l' },
         goal2: { name: 'Гипогликемия', pointerSize: 'm' },
         goal3: { name: 'Осложнения СД', pointerSize: 's' },
         goal4: { name: 'СС риски', pointerSize: 's' }
+    };
+
+    // Toggle dates
+
+    var toggleDates = ['1988', '2009', '2016'];
+
+    // Elements by number
+
+    var tab3Elems = {
+        "1": { num: 1, name: '&beta;-клетки', align: 'center', type: 'beta-bc' },
+        "2": { num: 2, name: '&darr; инкретинового эффекта', align: 'right' },
+        "3": { num: 3, name: 'Дефект &alpha;-клеток', align: 'left' },
+        "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat-sc' },
+        "5": { num: 5, name: 'Мышцы', align: 'left', type: 'muscle-sc' },
+        "6": { num: 6, name: 'Печень', align: 'left', type: 'liver-sc' },
+        "7": { num: 7, name: 'Головной мозг', align: 'left', type: 'brain-sc' },
+        "8": { num: 8, name: 'Микрофлора кишечника', align: 'right', type: 'infestains-sc' },
+        "9": { num: 9, name: 'Нарушение иммунной регуляции/воспаление', align: 'right', type: 'infection-sc' },
+        "10": { num: 10, name: 'Желудок', align: 'right', type: 'stomach-sc' },
+        "11": { num: 11, name: 'Почки', align: 'right', type: 'kidneys-sc' },
+        "amylin": { name: '&darr; амилин', align: 'right' },
+        "glucagonum": { name: '&uarr; глюкагон', align: 'left' }
+    };
+
+    var tab2Elems = {
+        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta-sc' },
+        "2": { num: 2, name: 'Инкретиновый эффект', align: 'right', type: 'num-sc' },
+        "3": { num: 3, name: 'Дефект &alpha;-клеток', align: 'left', type: 'num-sc' },
+        "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat-sc' },
+        "5": { num: 5, name: 'Мышцы', align: 'center-bottom', type: 'muscle-sc' },
+        "6": { num: 6, name: 'Печень', align: 'center-bottom', type: 'liver-sc' },
+        "7": { num: 7, name: 'Головной мозг', align: 'center-bottom', type: 'brain-sc' },
+        "8": { num: 8, name: 'Почки', align: 'right', type: 'brain-sc' }
+    };
+
+    var tab1Elems = {
+        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta-bc' },
+        "2": { num: 2, name: 'Мышцы', align: 'center-top', type: 'muscle-bc' },
+        "3": { num: 3, name: 'Печень', align: 'center-top', type: 'liver-bc' }
+    };
+
+    // Arrows from left to right. Elements in tabArrows are matching same elements in tabElems.
+
+    var tab1Arrows = {
+        element1: {
+            arrow1: { type: 'single', dir: '225deg', len: 'xxl' },
+            arrow2: { type: 'single', dir: 'bottom', len: 'l' },
+            arrow3: { type: 'single', dir: '315deg', len: 'xxl' },
+        },
+        element2: {
+            arrow1: { type: 'single', dir: 'right', len: 'l' }
+        },
+        element3: {
+            arrow1: { type: 'single', dir: 'left', len: 'l' }
+        }
+    };
+
+    var tab2Arrows = {
+        element1: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'm' }
+        },
+        element2: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'm' }
+        },
+        element3: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'm' }
+        },
+        element4: {
+            arrow1: { type: 'single', dir: 'left', len: 'm' }
+        },
+        element5: {
+            arrow1: { type: 'single', dir: 'top', len: 'm' }
+        },
+        element6: {
+            arrow1: { type: 'single', dir: 'top', len: 'm' }
+        },
+        element7: {
+            arrow1: { type: 'single', dir: 'top', len: 'm' }
+        },
+        element8: {
+            arrow1: { type: 'single', dir: 'right', len: 'm' }
+        }
+    };
+
+    var tab3Arrows = {
+        element1: {
+            arrow1: { type: 'double', dir: '190deg', len: 'm' },
+            arrow2: { type: 'double', dir: '225deg', len: 'l' },
+            arrow3: { type: 'single', dir: '240deg', len: 'xxl' },
+            arrow4: { type: 'single', dir: 'bottom', len: 'l' },
+            arrow5: { type: 'single', dir: 'bottom', len: 'xxl' },
+            arrow6: { type: 'single', dir: 'bottom', len: 'l' },
+            arrow7: { type: 'double', dir: '315deg', len: 'l' },
+            arrow8: { type: 'double', dir: '350deg', len: 'm' }
+        },
+        element2: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'l' }
+        },
+        element3: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'xs' }
+        },
+        element4: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'l' }
+        },
+        element5: {},
+        element6: {},
+        element7: {
+            arrow1: { type: 'double', dir: 'vertical', len: 's' }
+        },
+        element8: {},
+        element9: {},
+        element10: {
+            arrow1: { type: 'single', dir: 'right', len: 'l' }
+        },
+        element11: {
+            arrow1: { type: 'single', dir: 'top', len: 's' },
+            arrow2: { type: 'single', dir: 'bottom', len: 's' }
+        },
+        element12: {
+            arrow1: { type: 'single', dir: '330deg', len: 'xl' }
+        },
+        element13: {
+            arrow1: { type: 'single', dir: 'bottom', len: 'm' }
+        }
     };
 
 include slide/slide
@@ -19,6 +148,12 @@ include carousel/carousel
 include goal/goal
 include next-slide/next-slide
 include pagination/pagination
+include toggle/toggle
+include grid-layout/grid-layout
+include element/element
+include insul-resist/insul-resist
+include hyperglycemia/hyperglycemia
+include arrows/arrows
 
 doctype html
 html(lang="en")
@@ -37,10 +172,48 @@ html(lang="en")
         +carousel
             +slide
                 +title(titles.tab1.name, titles.tab1.size, titles.tab1.position)
+                +grid-layout
+                    - var elemCounter = 0;
+                    each item in tab1Elems
+                        - elemCounter++;
+                        +element(item.num, item.name, item.align, item.type)
+                            +arrows
+                                each item2 in tab1Arrows[`element${elemCounter}`]
+                                    if (item2.type === 'single')
+                                        +arrows__item(item2.dir, item2.len)
+                                    else if (item2.type === 'double')
+                                        +arrows__item-double(item2.dir, item2.len)
+                    +hyperglycemia(true)
             +slide
                 +title(titles.tab2.name, titles.tab2.size, titles.tab2.position)
+                +grid-layout
+                    - var elemCounter = 0;
+                    each item in tab2Elems
+                        - elemCounter++;
+                        +element(item.num, item.name, item.align, item.type)
+                            +arrows
+                                each item2 in tab2Arrows[`element${elemCounter}`]
+                                    if (item2.type === 'single')
+                                        +arrows__item(item2.dir, item2.len)
+                                    else if (item2.type === 'double')
+                                        +arrows__item-double(item2.dir, item2.len)
+                    +hyperglycemia(true)
             +slide
                 +title(titles.tab3.name, titles.tab3.size, titles.tab3.position)
+                +grid-layout
+                    - var elemCounter = 0;
+                    each item in tab3Elems
+                        - elemCounter++;
+                        +element(item.num, item.name, item.align, item.type)
+                            +arrows
+                                each item2 in tab3Arrows[`element${elemCounter}`]
+                                    if (item2.type === 'single')
+                                        +arrows__item(item2.dir, item2.len)
+                                    else if (item2.type === 'double')
+                                        +arrows__item-double(item2.dir, item2.len)
+                    +insul-resist
+                    +hyperglycemia(false)
+            +toggle(...toggleDates)
         +pagination
             +pagination__circle(true)
             +pagination__circle(false)

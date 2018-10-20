@@ -1,0 +1,5 @@
+mixin arrows__item(dir, length)
+    if (dir && length)
+        div(class=`arrows__item arrows__item_direction_${dir} arrows__item_length_${length}`)
+    else
+        .arrows__item

@@ -1,0 +1,14 @@
+include element__num
+include element__name
+include element__img
+
+mixin element(num, name, align, type)
+    div(class=`element element_align_${align}`)
+        if (num)
+            +element__num(num)
+        else
+            - var txtSize = 's';
+        +element__name(name, txtSize)
+        if (type)
+            +element__img(type)
+        block
