@@ -52,12 +52,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.ttf$/i,
+                test: /\.(otf|ttf)$/i,
                 use: {
                     loader: 'file-loader',
                     options: {
-                        name: '[path][name].[ext]',
-                        publicPath: '../'
+                        name: '[name].[ext]',
+                        outputPath: './fonts',
+                        publicPath: '../fonts'
                     }
                 }
             },

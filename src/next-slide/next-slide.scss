@@ -1,1 +1,27 @@
-  
+.next-slide {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 84px;
+    padding-top: 14px;
+    background-image:
+        radial-gradient(45% 30% at bottom center, orange 30%, transparent 100%),
+        radial-gradient(40% 80% at bottom center, orange 20%, transparent 85%);
+
+    &::after {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: -1px 4px 0 0;
+        border-top: 2px solid white;
+        border-right: 2px solid white;
+        transform: rotate(135deg);
+    }
+}
