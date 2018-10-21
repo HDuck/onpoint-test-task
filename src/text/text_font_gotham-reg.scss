@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "GothamPro";
+    src: url('./text/GothamProRegular.otf');
+    line-height: 1.2;
+}
+
+.text_font_gotham-reg {
+    font-family: "GothamPro", sans-serif;
+    font-weight: 400;
+}

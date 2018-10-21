@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "GothamProL";
+    src: url('./text/GothamProLight.otf');
+    line-height: 1.2;
+}
+
+.text_font_gotham-light {
+    font-family: "GothamProL", sans-serif;
+    font-weight: 200;
+}
