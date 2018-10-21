@@ -149,7 +149,7 @@
 include slide/slide
 include title/title
 include carousel/carousel
-include goal/goal
+include goals/goals
 include next-slide/next-slide
 include pagination/pagination
 include toggle/toggle
@@ -168,8 +168,7 @@ html(lang="en")
     body.container
         +slide(slideBg[0])
             +title(titles.slide1.name, titles.slide1.size, titles.slide1.position, titles.slide1.theme)
-            each item in slideOneGoals
-                +goal(item.name, item.pointerSize)
+            +goals(slideOneGoals)
             +next-slide
         +slide(slideBg[1])
             +title(titles.slide2.name, titles.slide2.size, titles.slide2.position, titles.slide2.theme)

@@ -1,0 +1,6 @@
+include goal/goal
+
+mixin goals(goalsList)
+    .goals
+        each item in goalsList
+            +goal(item.name, item.pointerSize)
