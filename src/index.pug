@@ -6,8 +6,8 @@
     // Titles by slides/tabs
     
     var titles = {
-        slide1: { name: 'Всегда ли цели терапии СД2 на поверхности?', size: 'l', position: 'top-left' },
-        slide2: { name: 'Основа терапии - патогенез СД2', size: 'l', position: 'center' },
+        slide1: { name: 'Всегда ли цели терапии СД2 на&nbsp;поверхности?', size: 'l', position: 'top-left', theme: 'blue' },
+        slide2: { name: 'Основа терапии &mdash; патогенез СД2', size: 'l', position: 'center' },
         tab1: { name: 'Звенья патогенеза СД2', size: 'm', position: 'top-left' },
         tab2: { name: 'Смертельный октет', size: 'm', position: 'top-left' },
         tab3: { name: 'Звенья патогенеза СД2', size: 'm', position: 'top-left' }
@@ -167,15 +167,15 @@ html(lang="en")
         title #{htmlWebpackPlugin.options.title}
     body.container
         +slide(slideBg[0])
-            +title(titles.slide1.name, titles.slide1.size, titles.slide1.position)
+            +title(titles.slide1.name, titles.slide1.size, titles.slide1.position, titles.slide1.theme)
             each item in slideOneGoals
                 +goal(item.name, item.pointerSize)
             +next-slide
         +slide(slideBg[1])
-            +title(titles.slide2.name, titles.slide2.size, titles.slide2.position)
+            +title(titles.slide2.name, titles.slide2.size, titles.slide2.position, titles.slide2.theme)
         +carousel
             +slide(slideBg[2])
-                +title(titles.tab1.name, titles.tab1.size, titles.tab1.position)
+                +title(titles.tab1.name, titles.tab1.size, titles.tab1.position, titles.tab1.theme)
                 +grid-layout
                     - var elemCounter = 0;
                     each item in tab1Elems
@@ -189,7 +189,7 @@ html(lang="en")
                                         +arrows__item-double(item2.dir, item2.len)
                     +hyperglycemia(true)
             +slide(slideBg[3])
-                +title(titles.tab2.name, titles.tab2.size, titles.tab2.position)
+                +title(titles.tab2.name, titles.tab2.size, titles.tab2.position, titles.tab2.theme)
                 +grid-layout
                     - var elemCounter = 0;
                     each item in tab2Elems
@@ -203,7 +203,7 @@ html(lang="en")
                                         +arrows__item-double(item2.dir, item2.len)
                     +hyperglycemia(true)
             +slide(slideBg[4])
-                +title(titles.tab3.name, titles.tab3.size, titles.tab3.position)
+                +title(titles.tab3.name, titles.tab3.size, titles.tab3.position, titles.tab3.theme)
                 +grid-layout
                     - var elemCounter = 0;
                     each item in tab3Elems

@@ -1,0 +1,19 @@
+.title {
+    display: inline-block;
+    padding: 0 70px;
+    font-family: "GothamPro", sans-serif;
+    font-weight: 400;
+    line-height: 1.23;
+    color: white;
+}
+
+.slide_bg_mountain-refl > .title {
+    font-family: "GothamProL", sans-serif;
+    font-weight: 200;
+}
+
+@import './title_theme_blue.scss';
+@import './title_size_l.scss';
+@import './title_size_m.scss';
+@import './title_pos_top-left.scss';
+@import './title_pos_center.scss';
