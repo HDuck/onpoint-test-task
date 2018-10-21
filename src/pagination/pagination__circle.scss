@@ -1,0 +1,10 @@
+.pagination__circle {
+    box-sizing: border-box;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border: .5px solid white;
+    border-radius: 50%;
+}
+
+@import 'pagination__circle_active';

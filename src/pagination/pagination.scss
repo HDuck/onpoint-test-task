@@ -1,0 +1,13 @@
+.pagination {
+    position: fixed;
+    right: 27px;
+    top: 371.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 14px;
+    height: 55px;
+}
+
+@import 'pagination__circle';
