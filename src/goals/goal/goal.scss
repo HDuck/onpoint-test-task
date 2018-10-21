@@ -1,0 +1,31 @@
+.goal {
+    position: absolute;
+    width: 230px;
+    height: 80px;
+
+    &:first-child {
+        top: -5px;
+        left: 539px;
+    }
+
+    &:nth-child(2) {
+        top: 140px;
+        left: 173px;
+    }
+
+    &:nth-child(3) {
+        top: 250px;
+        left: 372px;
+    }
+
+    &:last-child {
+        top: 230px;
+        left: 715px;
+    }
+}
+
+@import 'goal_structure_horizontal';
+@import 'goal_structure_vertical';
+@import 'goal_structure_vertical-spec';
+@import 'goal__name';
+@import 'goal__pointer';

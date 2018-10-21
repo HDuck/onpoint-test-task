@@ -1,5 +1,5 @@
-@import './text_font_gotham-reg.scss';
-@import './text_font_gotham-light.scss';
+@import 'text_font_gotham-reg';
+@import 'text_font_gotham-light';
 
 @font-face {
     font-family: "Lato";
@@ -13,5 +13,6 @@
     color: white;
 }
 
-@import './text_theme_blue.scss';
-@import './text_size_n.scss';
+@import 'text_theme_blue';
+@import 'text_size_n';
+@import 'text_size_m';

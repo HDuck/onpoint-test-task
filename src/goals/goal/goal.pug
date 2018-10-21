@@ -1,7 +1,7 @@
 include goal__name
 include goal__pointer
 
-mixin goal(name, pointSize)
-    .goal
+mixin goal(structure, name, pointSize)
+    div(class=`goal goal_structure_${structure}`)
         +goal__name(name)
         +goal__pointer(pointSize)
