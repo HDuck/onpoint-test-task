@@ -1,0 +1,30 @@
+.element__img {
+    background: rgba(255, 255, 255, 0.15) no-repeat center;
+    border-radius: 50%;
+}
+
+.element_align_right > .element__img {
+    margin: 0 13px 0 15px;
+}
+
+.element_align_left > .element__img {
+    margin: 4px 15px 0 12px;
+
+}
+
+.element_align_center-top-row > .element__img {
+    margin: 2px 12px 0;
+}
+@import 'element__img_circle_l';
+@import 'element__img_circle_s';
+@import 'element__img_type_beta';
+@import 'element__img_type_brain';
+@import 'element__img_type_fat';
+@import 'element__img_type_infection';
+@import 'element__img_type_infestains';
+@import 'element__img_type_kidneys';
+@import 'element__img_type_liver';
+@import 'element__img_type_muscle';
+@import 'element__img_type_num2';
+@import 'element__img_type_num3';
+@import 'element__img_type_stomach';

@@ -1,0 +1,11 @@
+.element__name {
+    width: 220px;
+    margin: 0;
+}
+
+.element_align_center-top-row > .element__name {
+    width: auto;
+    height: auto;
+    margin: 3px 66px 0 0;
+    font-size: 26px;
+}

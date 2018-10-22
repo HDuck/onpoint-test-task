@@ -1,0 +1,16 @@
+.element__img_type_num3 {
+
+    &::after {
+        content: "3";
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        margin-top: 5px;
+        font-family: "Lato", sans-serif;
+        font-size: 37px;
+        text-align: center;
+        color: white;
+    }
+}

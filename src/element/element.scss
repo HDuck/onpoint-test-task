@@ -1,0 +1,12 @@
+.element {
+    display: flex;
+}
+
+@import 'element_align_left';
+@import 'element_align_right';
+@import 'element_align_center-top';
+@import 'element_align_center-top-row';
+@import 'element_align_center-bottom';
+@import 'element__num';
+@import 'element__name';
+@import 'element__img';

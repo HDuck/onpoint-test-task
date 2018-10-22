@@ -1,0 +1,27 @@
+.element__img_type_beta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: "\03b2";
+        display: block;
+        font-size: 70px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+.element__img_type_beta.element__img_circle_s {
+
+    &::after {
+        margin-top: 2px;
+    }
+}
+
+.element__img_type_beta.element__img_circle_l {
+
+    &::after {
+        margin-top: -5px;
+    }
+}

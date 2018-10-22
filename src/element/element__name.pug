@@ -1,5 +1,5 @@
-mixin element__name(name, txtSize)
-    if (txtSize)
-        h2(class=`element__name text_size_${txtSize}`)!= name
+mixin element__name(name, withNum)
+    if (withNum)
+        h2(class=`text text_size_m2 element__name`)!= name
     else
-        h2.element__name!= name
+        h2(class="text text_size_n element__name")!= name
