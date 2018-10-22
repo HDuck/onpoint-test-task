@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "LatoB";
+    src: url('./text/LatoBold.ttf');
+    line-height: 1.2;
+}
+
+.text_font_lato-bold {
+    font-family: "LatoB", sans-serif;
+    font-weight: 600;
+}
