@@ -1,42 +1,84 @@
-@keyframes circles-bg {
-    from {
-        top: 25px;
-        right: 25px;
-        bottom: 25px;
-        left: 25px;
-        opacity: 1;
+@keyframes circle-bg {
+    0% {
+      top: 25px;
+      left: 25px;
+      right: 25px;
+      bottom: 25px;
+      opacity: .8;
     }
-    to {       
+    75% {
         top: 0;
+        left: 0;
         right: 0;
         bottom: 0;
-        left: 0;
-        opacity: .1; 
+        opacity: .1;        
+    }
+    85% {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .1;
+    }
+    100% {
+      top: .5px;
+      left: .5px;
+      right: .5px;
+      bottom: .5px;
+      opacity: 0;
     }
 }
 
 @keyframes circle {
-    from {
-        top: 25px;
-        right: 25px;
-        bottom: 25px;
-        left: 25px;
-        opacity: .3;
+    0% {
+      top: 25px;
+      left: 25px;
+      right: 25px;
+      bottom: 25px;
+      opacity: .2;
     }
-    to {       
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 1;
+    75% {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        opacity: 1;        
+    }
+    85% {
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      opacity: 1;
+    }
+    100% {
+      top: .5px;
+      left: .5px;
+      right: .5px;
+      bottom: .5px;
+      opacity: 0;
     }
 }
 
 .goal__pointer {
     position: relative;
     margin: 10px;
-    background-image: radial-gradient(circle at center, transparent 66%, #d01537 70%, #de771b 95%);
-    border-radius: 50%;
+}
+
+// For better animation look on middle and small circles
+
+.goal__pointer_size_s > .point {
+
+    &::after {
+        background-image: radial-gradient(circle at center, transparent 60%, #d74729 62%, #de771b 100%);
+    }
+}
+
+.goal__pointer_size_m > .point {
+
+    &::after {
+        background-image: radial-gradient(circle at center, transparent 64%, #d74729 66%, #de771b 100%);
+    }
 }
 
 .point {
@@ -49,34 +91,40 @@
     &::before {
         content: "";
         position: absolute;
-        background-image: radial-gradient(circle at center, #de771b , #d01537);
+        background-image: radial-gradient(circle at center, #de771b , #d74729);
         border-radius: 50%;
-        animation: circles-bg 3s ease-out infinite;
+        animation: circle-bg 4s ease-out infinite;
     }
 
     &::after {
         content: "";
         position: absolute;
-        background-image: radial-gradient(circle at center, transparent 62%, #d01537 70%, #de771b 95%);
+        background-image: radial-gradient(circle at center, transparent 66%, #d74729 68%, #de771b 100%);
         border-radius: 50%;
-        animation: circle 3s ease-out infinite;
+        animation: circle 4s ease-out infinite;
     }
 
     &:first-child {
-        &::before, &::after {
-            animation-delay: 0s;
-        }
-    }
-
-    &:nth-child(2) {
         &::before, &::after {
             animation-delay: 1s;
         }
     }
 
-    &:last-child {
+    &:nth-child(2) {
         &::before, &::after {
             animation-delay: 2s;
+        }
+    }
+
+    &:nth-child(3) {
+        &::before, &::after {
+            animation-delay: 3s;
+        }
+    }
+
+    &:last-child {
+        &::before, &::after {
+            animation-delay: 4s;
         }
     }
 }
