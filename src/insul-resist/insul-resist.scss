@@ -1,0 +1,11 @@
+.insul-resist {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent 85%);
+    border-radius: 50px 50px 0 0;
+}
