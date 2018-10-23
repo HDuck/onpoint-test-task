@@ -7,4 +7,8 @@
         height: 100%;
         background: transparent url('./element/element-liver.png') no-repeat center;
     }
+
+    &.element__img_circle_s::after {
+        background-position: 5px 15px;
+    }
 }

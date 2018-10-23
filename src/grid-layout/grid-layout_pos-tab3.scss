@@ -1,0 +1,239 @@
+.grid-layout_pos-tab3 {
+    grid-template-columns: 275px 70px 175px 134px 49px auto;
+    grid-template-rows: 80px 90px 18px 47px 86px 85px 70px 50px;
+
+    // Beta element
+
+    & > .grid-layout__item1 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-top: 1px;
+    }
+
+    // Incretin effect element
+
+    & > .grid-layout__item2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 3px 10px 0 0;
+    }
+
+    // Alpha cell defect element
+
+    & > .grid-layout__item3 {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 3px 0 0 22px;
+
+        & .element__num {
+            margin-bottom: 0;
+        }
+    }
+
+    // Fat element
+
+    & > .grid-layout__item4 {
+        position: relative;
+        z-index: 2;
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        margin-left: 5px;
+
+        & .element__num {
+            margin-bottom: 2px;
+        }
+
+        & .element__name {
+            margin-left: 2px;
+            letter-spacing: .2px;
+        }
+    }
+    
+    // Muscle element
+
+    & > .grid-layout__item5 {
+        position: relative;
+        z-index: 2;
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        margin-left: 5px;
+
+        & .element__num {
+            margin-bottom: 2px;
+        }
+
+        & .element__name {
+            margin-left: 2px;
+            letter-spacing: .2px;
+        }
+    }
+    
+    // Liver element
+
+    & > .grid-layout__item6 {
+        position: relative;
+        z-index: 2;
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        margin-left: 5px;
+
+        & .element__num {
+            line-height: 1.2;
+        }
+    }
+
+    // Brain element
+
+    & > .grid-layout__item7 {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    // Infestains element
+
+    & > .grid-layout__item8 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: -5px;
+    }
+
+    // Infection element
+
+    & > .grid-layout__item9 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    // Stomach element
+
+    & > .grid-layout__item10 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: -17px;
+
+        & .element__num {
+            margin-top: -18px;
+        }
+    }
+
+    // Kidneys element
+
+    & > .grid-layout__item11 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: -12px 0 0 -15px;
+
+        & .element__img {
+            margin-left: 9px;
+        }
+
+        & .element__num {
+            margin-top: 2px;
+        }
+    }
+
+    // Amylin element
+
+    & > .grid-layout__item12 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 11px;
+
+        & > .element {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    // Glucagonum element
+
+    & > .grid-layout__item13 {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 0 0 17px 25px;
+
+        & > .element {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    // Insulin resistance element
+
+    & > .grid-layout__item14 {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // Hyperglycemia element
+
+    & > .grid-layout__item15 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 8px 54px;
+    }
+}

@@ -1,7 +1,8 @@
 .element_align_right {
     flex-flow: column wrap;
     justify-content: center;
-    align-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
     width: 310px;
     height: 100px;
     text-align: right;

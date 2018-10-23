@@ -1,0 +1,9 @@
+.grid-layout {
+    display: grid;
+    width: auto;
+    margin-right: 63px;
+}
+
+@import 'grid-layout_pos-tab1';
+@import 'grid-layout_pos-tab2';
+@import 'grid-layout_pos-tab3';

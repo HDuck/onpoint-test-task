@@ -1,3 +1,7 @@
+- var tabCount = 0;
+
+include grid-layout__item
+
 mixin grid-layout
-    .grid-layout
+    div(class=`grid-layout grid-layout_pos-tab${++tabCount}`)
         block

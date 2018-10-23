@@ -29,36 +29,36 @@
     // Elements by number
 
     var tab3Elems = {
-        "1": { num: 1, name: '&beta;-клетки', align: 'center', type: 'beta-bc' },
+        "1": { num: 1, name: '&beta;-клетки', align: 'center-top-row', type: 'beta', circle: 'l' },
         "2": { num: 2, name: '&darr; инкретинового эффекта', align: 'right' },
         "3": { num: 3, name: 'Дефект &alpha;-клеток', align: 'left' },
-        "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat-sc' },
-        "5": { num: 5, name: 'Мышцы', align: 'left', type: 'muscle-sc' },
-        "6": { num: 6, name: 'Печень', align: 'left', type: 'liver-sc' },
-        "7": { num: 7, name: 'Головной мозг', align: 'left', type: 'brain-sc' },
-        "8": { num: 8, name: 'Микрофлора кишечника', align: 'right', type: 'infestains-sc' },
-        "9": { num: 9, name: 'Нарушение иммунной регуляции/воспаление', align: 'right', type: 'infection-sc' },
-        "10": { num: 10, name: 'Желудок', align: 'right', type: 'stomach-sc' },
-        "11": { num: 11, name: 'Почки', align: 'right', type: 'kidneys-sc' },
+        "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat', circle: 's' },
+        "5": { num: 5, name: 'Мышцы', align: 'left', type: 'muscle', circle: 's' },
+        "6": { num: 6, name: 'Печень', align: 'left', type: 'liver', circle: 's' },
+        "7": { num: 7, name: 'Головной мозг', align: 'left', type: 'brain', circle: 's' },
+        "8": { num: 8, name: 'Микрофлора кишечника', align: 'right', type: 'infestains', circle: 's' },
+        "9": { num: 9, name: 'Нарушение иммунной регуляции/воспаление', align: 'right', type: 'infection', circle: 's' },
+        "10": { num: 10, name: 'Желудок', align: 'right', type: 'stomach', circle: 's' },
+        "11": { num: 11, name: 'Почки', align: 'right', type: 'kidneys', circle: 's' },
         "amylin": { name: '&darr; амилин', align: 'right' },
         "glucagonum": { name: '&uarr; глюкагон', align: 'left' }
     };
 
     var tab2Elems = {
-        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta-sc' },
-        "2": { num: 2, name: 'Инкретиновый эффект', align: 'right', type: 'num-sc' },
-        "3": { num: 3, name: 'Дефект &alpha;-клеток', align: 'left', type: 'num-sc' },
-        "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat-sc' },
-        "5": { num: 5, name: 'Мышцы', align: 'center-bottom', type: 'muscle-sc' },
-        "6": { num: 6, name: 'Печень', align: 'center-bottom', type: 'liver-sc' },
-        "7": { num: 7, name: 'Головной мозг', align: 'center-bottom', type: 'brain-sc' },
-        "8": { num: 8, name: 'Почки', align: 'right', type: 'brain-sc' }
+        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta', circle: 's' },
+        "2": { name: 'Инкретиновый эффект', align: 'right', type: 'num2', circle: 's' },
+        "3": { name: 'Дефект &alpha;-клеток', align: 'left', type: 'num3', circle: 's' },
+        "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat', circle: 's' },
+        "5": { num: 5, name: 'Мышцы', align: 'center-bottom', type: 'muscle', circle: 's' },
+        "6": { num: 6, name: 'Печень', align: 'center-bottom', type: 'liver', circle: 's' },
+        "7": { num: 7, name: 'Головной мозг', align: 'center-bottom', type: 'brain', circle: 's' },
+        "8": { num: 8, name: 'Почки', align: 'right', type: 'brain', circle: 's' }
     };
 
     var tab1Elems = {
-        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta-bc' },
-        "2": { num: 2, name: 'Мышцы', align: 'center-top', type: 'muscle-bc' },
-        "3": { num: 3, name: 'Печень', align: 'center-top', type: 'liver-bc' }
+        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta', circle: 'l' },
+        "2": { num: 2, name: 'Мышцы', align: 'center-top', type: 'muscle', circle: 'l' },
+        "3": { num: 3, name: 'Печень', align: 'center-top', type: 'liver', circle: 'l' }
     };
 
     // Arrows from left to right. Elements in tabArrows are matching same elements in tabElems.
@@ -179,43 +179,50 @@ html(lang="en")
                     - var elemCounter = 0;
                     each item in tab1Elems
                         - elemCounter++;
-                        +element(item.num, item.name, item.align, item.type)
-                            +arrows
-                                each item2 in tab1Arrows[`element${elemCounter}`]
-                                    if (item2.type === 'single')
-                                        +arrows__item(item2.dir, item2.len)
-                                    else if (item2.type === 'double')
-                                        +arrows__item-double(item2.dir, item2.len)
-                    +hyperglycemia(true)
+                        +grid-layout__item(elemCounter)
+                            +element(item.num, item.name, item.align, item.type, item.circle)
+                                +arrows
+                                    each item2 in tab1Arrows[`element${elemCounter}`]
+                                        if (item2.type === 'single')
+                                            +arrows__item(item2.dir, item2.len)
+                                        else if (item2.type === 'double')
+                                            +arrows__item-double(item2.dir, item2.len)
+                    +grid-layout__item(++elemCounter)
+                        +hyperglycemia(false)
             +slide(slideBg[3])
                 +title(titles.tab2.name, titles.tab2.size, titles.tab2.position, titles.tab2.theme)
                 +grid-layout
                     - var elemCounter = 0;
                     each item in tab2Elems
                         - elemCounter++;
-                        +element(item.num, item.name, item.align, item.type)
-                            +arrows
-                                each item2 in tab2Arrows[`element${elemCounter}`]
-                                    if (item2.type === 'single')
-                                        +arrows__item(item2.dir, item2.len)
-                                    else if (item2.type === 'double')
-                                        +arrows__item-double(item2.dir, item2.len)
-                    +hyperglycemia(true)
+                        +grid-layout__item(elemCounter)
+                            +element(item.num, item.name, item.align, item.type, item.circle)
+                                +arrows
+                                    each item2 in tab2Arrows[`element${elemCounter}`]
+                                        if (item2.type === 'single')
+                                            +arrows__item(item2.dir, item2.len)
+                                        else if (item2.type === 'double')
+                                            +arrows__item-double(item2.dir, item2.len)
+                    +grid-layout__item(++elemCounter)
+                        +hyperglycemia(false)
             +slide(slideBg[4])
                 +title(titles.tab3.name, titles.tab3.size, titles.tab3.position, titles.tab3.theme)
                 +grid-layout
                     - var elemCounter = 0;
                     each item in tab3Elems
                         - elemCounter++;
-                        +element(item.num, item.name, item.align, item.type)
-                            +arrows
-                                each item2 in tab3Arrows[`element${elemCounter}`]
-                                    if (item2.type === 'single')
-                                        +arrows__item(item2.dir, item2.len)
-                                    else if (item2.type === 'double')
-                                        +arrows__item-double(item2.dir, item2.len)
-                    +insul-resist
-                    +hyperglycemia(false)
+                        +grid-layout__item(elemCounter)
+                            +element(item.num, item.name, item.align, item.type, item.circle)
+                                +arrows
+                                    each item2 in tab3Arrows[`element${elemCounter}`]
+                                        if (item2.type === 'single')
+                                            +arrows__item(item2.dir, item2.len)
+                                        else if (item2.type === 'double')
+                                            +arrows__item-double(item2.dir, item2.len)
+                    +grid-layout__item(++elemCounter)
+                        +insul-resist
+                    +grid-layout__item(++elemCounter)
+                        +hyperglycemia(false)
             +toggle(...toggleDates)
         +pagination
             +pagination__circle(true)
