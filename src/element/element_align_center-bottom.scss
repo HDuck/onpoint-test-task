@@ -1,13 +1,13 @@
 .element_align_center-bottom {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
 .element_align_center-bottom > .element__num {
-    order: 2;
+    order: 1;
 }
 
 .element_align_center-bottom > .element__name {
-    order: 1;
+    order: 2;
 }

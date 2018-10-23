@@ -1,5 +1,5 @@
-mixin element__name(name, withNum)
-    if (withNum)
+mixin element__name(name, withNum, isTypeNum)
+    if (withNum || isTypeNum === 'num2' || isTypeNum === 'num3')
         h2(class=`text text_size_m2 element__name`)!= name
     else
         h2(class="text text_size_n element__name")!= name

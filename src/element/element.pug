@@ -6,7 +6,7 @@ mixin element(num, name, align, type, circ)
     div(class=`element element_align_${align}`)
         if (num)
             +element__num(num)
-        +element__name(name, num)
+        +element__name(name, num, type)
         if (type)
             +element__img(type, circ)
         block

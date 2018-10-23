@@ -29,9 +29,9 @@
     // Elements by number
 
     var tab3Elems = {
-        "1": { num: 1, name: '&beta;-клетки', align: 'center-top-row', type: 'beta', circle: 'l' },
+        "1": { num: 1, name: '&beta;&#8209;клетки', align: 'center-top-row', type: 'beta', circle: 'l' },
         "2": { num: 2, name: '&darr; инкретинового эффекта', align: 'right' },
-        "3": { num: 3, name: 'Дефект &alpha;-клеток', align: 'left' },
+        "3": { num: 3, name: 'Дефект &alpha;&#8209;клеток', align: 'left' },
         "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat', circle: 's' },
         "5": { num: 5, name: 'Мышцы', align: 'left', type: 'muscle', circle: 's' },
         "6": { num: 6, name: 'Печень', align: 'left', type: 'liver', circle: 's' },
@@ -45,18 +45,18 @@
     };
 
     var tab2Elems = {
-        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta', circle: 's' },
+        "1": { num: 1, name: '&beta;&#8209;клетки', align: 'center-top', type: 'beta', circle: 's' },
         "2": { name: 'Инкретиновый эффект', align: 'right', type: 'num2', circle: 's' },
-        "3": { name: 'Дефект &alpha;-клеток', align: 'left', type: 'num3', circle: 's' },
+        "3": { name: 'Дефект &alpha;&#8209;клеток', align: 'left', type: 'num3', circle: 's' },
         "4": { num: 4, name: 'Жировые клетки', align: 'left', type: 'fat', circle: 's' },
         "5": { num: 5, name: 'Мышцы', align: 'center-bottom', type: 'muscle', circle: 's' },
         "6": { num: 6, name: 'Печень', align: 'center-bottom', type: 'liver', circle: 's' },
         "7": { num: 7, name: 'Головной мозг', align: 'center-bottom', type: 'brain', circle: 's' },
-        "8": { num: 8, name: 'Почки', align: 'right', type: 'brain', circle: 's' }
+        "8": { num: 8, name: 'Почки', align: 'right', type: 'kidneys', circle: 's' }
     };
 
     var tab1Elems = {
-        "1": { num: 1, name: '&beta;-клетки', align: 'center-top', type: 'beta', circle: 'l' },
+        "1": { num: 1, name: '&beta;&#8209;клетки', align: 'center-top', type: 'beta', circle: 'l' },
         "2": { num: 2, name: 'Мышцы', align: 'center-top', type: 'muscle', circle: 'l' },
         "3": { num: 3, name: 'Печень', align: 'center-top', type: 'liver', circle: 'l' }
     };
@@ -188,7 +188,7 @@ html(lang="en")
                                         else if (item2.type === 'double')
                                             +arrows__item-double(item2.dir, item2.len)
                     +grid-layout__item(++elemCounter)
-                        +hyperglycemia(false)
+                        +hyperglycemia('s')
             +slide(slideBg[3])
                 +title(titles.tab2.name, titles.tab2.size, titles.tab2.position, titles.tab2.theme)
                 +grid-layout
@@ -204,7 +204,7 @@ html(lang="en")
                                         else if (item2.type === 'double')
                                             +arrows__item-double(item2.dir, item2.len)
                     +grid-layout__item(++elemCounter)
-                        +hyperglycemia(false)
+                        +hyperglycemia('l')
             +slide(slideBg[4])
                 +title(titles.tab3.name, titles.tab3.size, titles.tab3.position, titles.tab3.theme)
                 +grid-layout
@@ -222,7 +222,7 @@ html(lang="en")
                     +grid-layout__item(++elemCounter)
                         +insul-resist
                     +grid-layout__item(++elemCounter)
-                        +hyperglycemia(false)
+                        +hyperglycemia
             +toggle(...toggleDates)
         +pagination
             +pagination__circle(true)

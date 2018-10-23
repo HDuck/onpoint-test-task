@@ -15,6 +15,11 @@
 .element_align_center-top-row > .element__img {
     margin: 2px 12px 0;
 }
+
+.element_align_center-bottom > .element__img {
+    margin-bottom: 4px;
+}
+
 @import 'element__img_circle_l';
 @import 'element__img_circle_s';
 @import 'element__img_type_beta';
