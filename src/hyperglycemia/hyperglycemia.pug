@@ -1,5 +1,8 @@
 mixin hyperglycemia(border)
     if (border)
-        div(class=`text text_size_xm hyperglycemia hyperglycemia_border_${border}`) Гипергликемия
+        if (border === 's')
+            div(class=`text text_size_m2 hyperglycemia hyperglycemia_border_s`) Гипергликемия
+        else
+            div(class=`text text_size_xm hyperglycemia hyperglycemia_border_l`) Гипергликемия
     else
         div(class="text text_size_xm hyperglycemia") Гипергликемия
