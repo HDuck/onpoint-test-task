@@ -65,9 +65,9 @@
 
     var tab1Arrows = {
         element1: {
-            arrow1: { type: 'single', dir: '225deg', len: 'xxl' },
+            arrow1: { type: 'single', dir: '230deg', len: 'xxl' },
             arrow2: { type: 'single', dir: 'bottom', len: 'l' },
-            arrow3: { type: 'single', dir: '315deg', len: 'xxl' },
+            arrow3: { type: 'single', dir: '130deg', len: 'xxl' },
         },
         element2: {
             arrow1: { type: 'single', dir: 'right', len: 'l' }
@@ -106,24 +106,22 @@
 
     var tab3Arrows = {
         element1: {
-            arrow1: { type: 'double', dir: '190deg', len: 'm' },
-            arrow2: { type: 'double', dir: '225deg', len: 'l' },
-            arrow3: { type: 'single', dir: '240deg', len: 'xxl' },
+            arrow1: { type: 'double', dir: '262deg', len: 'm' },
+            arrow2: { type: 'double', dir: '239deg', len: 'l' },
+            arrow3: { type: 'single', dir: '232deg', len: 'g' },
             arrow4: { type: 'single', dir: 'bottom', len: 'l' },
             arrow5: { type: 'single', dir: 'bottom', len: 'xxl' },
             arrow6: { type: 'single', dir: 'bottom', len: 'l' },
-            arrow7: { type: 'double', dir: '315deg', len: 'l' },
-            arrow8: { type: 'double', dir: '350deg', len: 'm' }
+            arrow7: { type: 'double', dir: '121deg', len: 'l' },
+            arrow8: { type: 'double', dir: '98deg', len: 'm' }
         },
         element2: {
-            arrow1: { type: 'single', dir: 'bottom', len: 'l' }
+            arrow1: { type: 'single', dir: 'bottom', len: 'xm' }
         },
         element3: {
             arrow1: { type: 'single', dir: 'bottom', len: 'xs' }
         },
-        element4: {
-            arrow1: { type: 'single', dir: 'bottom', len: 'l' }
-        },
+        element4: {},
         element5: {},
         element6: {},
         element7: {
@@ -139,7 +137,8 @@
             arrow2: { type: 'single', dir: 'bottom', len: 's' }
         },
         element12: {
-            arrow1: { type: 'single', dir: '330deg', len: 'xl' }
+            arrow1: { type: 'single', dir: 'bottom', len: 's' },
+            arrow2: { type: 'single', dir: '116deg', len: 'xl' }
         },
         element13: {
             arrow1: { type: 'single', dir: 'bottom', len: 'm' }
@@ -152,7 +151,6 @@ include carousel/carousel
 include goals/goals
 include next-slide/next-slide
 include pagination/pagination
-include toggle/toggle
 include grid-layout/grid-layout
 include element/element
 include insul-resist/insul-resist
@@ -172,8 +170,10 @@ html(lang="en")
             +next-slide
         +slide(slideBg[1])
             +title(titles.slide2.name, titles.slide2.size, titles.slide2.position, titles.slide2.theme)
-        +carousel
+        +carousel(toggleDates)
+            - var tabCounter = 0;
             +slide(slideBg[2])
+                - tabCounter++;
                 +title(titles.tab1.name, titles.tab1.size, titles.tab1.position, titles.tab1.theme)
                 +grid-layout
                     - var elemCounter = 0;
@@ -181,15 +181,16 @@ html(lang="en")
                         - elemCounter++;
                         +grid-layout__item(elemCounter)
                             +element(item.num, item.name, item.align, item.type, item.circle)
-                                +arrows
+                                +arrows(tabCounter, elemCounter)
                                     each item2 in tab1Arrows[`element${elemCounter}`]
                                         if (item2.type === 'single')
                                             +arrows__item(item2.dir, item2.len)
                                         else if (item2.type === 'double')
-                                            +arrows__item-double(item2.dir, item2.len)
+                                            +arrows__item_double(item2.dir, item2.len)
                     +grid-layout__item(++elemCounter)
                         +hyperglycemia('s')
             +slide(slideBg[3])
+                - tabCounter++;
                 +title(titles.tab2.name, titles.tab2.size, titles.tab2.position, titles.tab2.theme)
                 +grid-layout
                     - var elemCounter = 0;
@@ -197,15 +198,16 @@ html(lang="en")
                         - elemCounter++;
                         +grid-layout__item(elemCounter)
                             +element(item.num, item.name, item.align, item.type, item.circle)
-                                +arrows
+                                +arrows(tabCounter, elemCounter)
                                     each item2 in tab2Arrows[`element${elemCounter}`]
                                         if (item2.type === 'single')
                                             +arrows__item(item2.dir, item2.len)
                                         else if (item2.type === 'double')
-                                            +arrows__item-double(item2.dir, item2.len)
+                                            +arrows__item_double(item2.dir, item2.len)
                     +grid-layout__item(++elemCounter)
                         +hyperglycemia('l')
             +slide(slideBg[4])
+                - tabCounter++;
                 +title(titles.tab3.name, titles.tab3.size, titles.tab3.position, titles.tab3.theme)
                 +grid-layout
                     - var elemCounter = 0;
@@ -213,17 +215,16 @@ html(lang="en")
                         - elemCounter++;
                         +grid-layout__item(elemCounter)
                             +element(item.num, item.name, item.align, item.type, item.circle)
-                                +arrows
+                                +arrows(tabCounter, elemCounter)
                                     each item2 in tab3Arrows[`element${elemCounter}`]
                                         if (item2.type === 'single')
                                             +arrows__item(item2.dir, item2.len)
                                         else if (item2.type === 'double')
-                                            +arrows__item-double(item2.dir, item2.len)
+                                            +arrows__item_double(item2.dir, item2.len)
                     +grid-layout__item(++elemCounter)
                         +insul-resist
                     +grid-layout__item(++elemCounter)
                         +hyperglycemia
-            +toggle(...toggleDates)
         +pagination
             +pagination__circle(true)
             +pagination__circle(false)

@@ -1,0 +1,47 @@
+.arrows__item {
+    position: absolute;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 3.5px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 3px;
+        display: block;
+        width: 1px;
+        height: 50px;
+        background-color: white;
+    }
+}
+
+@import './arrows__item_double';
+@import './arrows__item_length_g';
+@import './arrows__item_length_xxl';
+@import './arrows__item_length_xl';
+@import './arrows__item_length_l';
+@import './arrows__item_length_xm';
+@import './arrows__item_length_m';
+@import './arrows__item_length_s';
+@import './arrows__item_length_xs';
+@import './arrows__item-double_length_s';
+@import './arrows__item-double_length_m';
+@import './arrows__item-double_length_l';
+@import './arrows__item_direction_top';
+@import './arrows__item_direction_right';
+@import './arrows__item_direction_bottom';
+@import './arrows__item_direction_left';
+@import './arrows__item_direction_262deg';
+@import './arrows__item_direction_239deg';
+@import './arrows__item_direction_232deg';
+@import './arrows__item_direction_230deg';
+@import './arrows__item_direction_130deg';
+@import './arrows__item_direction_121deg';
+@import './arrows__item_direction_116deg';
+@import './arrows__item_direction_98deg';

@@ -1,0 +1,13 @@
+.arrows__item_double {
+    position: absolute;
+    
+    & > .arrows__item {
+        position: relative;
+        
+        &:last-child {
+            transform: rotate(180deg);
+            bottom: -73px;
+            right: 2px;
+        }
+    }
+}

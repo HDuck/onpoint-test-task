@@ -1,0 +1,10 @@
+.arrows__item-double_length_m > .arrows__item {
+    
+    &:nth-child(2) {
+        bottom: -120px;
+    }
+
+    &::before {
+        height: 105px;
+    }
+}

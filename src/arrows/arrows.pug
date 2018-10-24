@@ -1,6 +1,5 @@
 include arrows__item
-include arrows__item-double
 
-mixin arrows
-    .arrows
+mixin arrows(tabCount, elemCount)
+    div(class=`arrows arrows_block${tabCount}-${elemCount}`)
         block

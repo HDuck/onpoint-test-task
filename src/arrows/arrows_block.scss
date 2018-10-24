@@ -1,0 +1,243 @@
+// Positioning arrows for tab1
+
+.arrows_block1 {
+
+    // Beta arrows
+
+    &-1 > .arrows__item {
+
+        &:first-child {
+            top: 274px;
+            left: -156px;
+        }
+        
+        &:nth-child(2) {
+            top: 238px;
+            left: 48px;
+        }
+
+        &:last-child {
+            top: 268px;
+            left: 253px;
+        }
+    }
+
+    // Muscle arrow
+
+    &-2 > .arrows__item {
+        top: 127px;
+        right: -70px;
+    }
+
+    // Liver arrow
+
+    &-3 > .arrows__item {
+        top: 134px;
+        left: -76px;
+    }
+}
+
+// Positioning arrows for tab2
+
+.arrows_block2 {
+    
+    // Beta arrow
+
+    &-1 > .arrows__item {
+        bottom: -37px;
+        left: 97px;
+    }
+
+    // Incretin effect arrow
+    
+    &-2 > .arrows__item {
+        bottom: -27px;
+        left: 100px;
+    }
+    
+    // Alpha defect arrow
+
+    &-3 > .arrows__item {
+        bottom: -30px;
+        left: 45px;
+    }
+    
+    // Fat arrow
+
+    &-4 > .arrows__item {
+        left: -29px;
+        top: 50px;
+    }
+  
+    // Muscle arrow
+    
+    &-5 > .arrows__item {
+        top: -34px;
+        left: 54px;
+    }
+    
+    // Liver arrow
+
+    &-6 > .arrows__item {
+        top: -34px;
+        left: 92px;
+    }
+    
+    // Brain arrow
+
+    &-7 > .arrows__item {
+        top: -34px;
+        left: 60px;
+    }
+    
+    // Kidneys arrow
+
+    &-8 > .arrows__item {
+        right: -25px;
+        top: 46px;
+    }
+}
+
+// Positioning arrows for tab3
+
+.arrows_block3 {
+    
+    // Beta arrows
+
+    &-1 > .arrows__item_double {
+
+        &:first-child {
+            bottom: 16px;
+            left: -90px;
+        }
+
+        &:nth-child(2) {
+            bottom: -77px;
+            left: -94px;
+        }
+
+        &:nth-child(7) {
+            bottom: -78px;
+            right: -48px;
+
+            & > .arrows__item:first-child {
+                right: 9px;
+            }
+
+            & > .arrows__item:last-child {
+                left: 7px;
+            }
+        }
+
+        &:last-child {
+            bottom: 15px;
+            right: -51px;
+            
+            & > .arrows__item:first-child {
+                right: 9px;
+            }
+
+            & > .arrows__item:last-child {
+                left: 7px;
+            }
+        }
+    }
+
+    &-1 > .arrows__item {
+
+        &:nth-child(3) {
+            bottom: -152px;
+            left: -129px;
+        }
+
+        &:nth-child(4) {
+            bottom: -79px;
+            left: 72px;
+        }
+
+        &:nth-child(5) {
+            bottom: -225px;
+            right: 125px;
+        }
+
+        &:nth-child(6) {
+            bottom: -79px;
+            right: 101px;
+        }
+    }
+
+    // Incretin effect arrow
+    
+    &-2 > .arrows__item {
+        bottom: -55px;
+        right: 4px;
+    }
+    
+    // Alpha defect arrow
+
+    &-3 > .arrows__item {
+        bottom: -17px;
+        left: 11px;
+    }
+    
+    // Brain arrow
+
+    &-7 > .arrows__item_double {
+        bottom: 6px;
+        left: 98px;
+
+                    
+        & > .arrows__item:first-child {
+            right: 9px;
+        }
+
+        & > .arrows__item:last-child {
+            left: 9px;
+        }
+    }
+ 
+    // Stomach arrow
+
+    &-10 > .arrows__item {
+        right: -77px;
+        top: 52px;
+    }
+    
+    // Kidneys arrows
+
+    &-11 > .arrows__item {
+
+        &:first-child {
+            right: 59px;
+            top: -14px;
+        }
+        
+        &:last-child {
+            right: 29px;
+            top: 14px;
+        }
+
+    }
+    
+    // Amylin arrows
+
+    &-12 > .arrows__item {
+
+        &:first-child {
+            right: 27px;
+            top: 54px;
+        }
+
+        &:last-child {
+            right: -90px;
+            bottom: -57px;           
+        }
+    }
+    
+    // Glucagonum arrow
+
+    &-13 > .arrows__item {
+        left: 8px;
+        bottom: -42px;
+    }
+}

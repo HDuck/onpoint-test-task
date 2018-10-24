@@ -3,3 +3,8 @@ mixin arrows__item(dir, length)
         div(class=`arrows__item arrows__item_direction_${dir} arrows__item_length_${length}`)
     else
         .arrows__item
+
+mixin arrows__item_double(dir, length)
+    div(class=`arrows__item_double arrows__item_direction_${dir} arrows__item-double_length_${length}`)
+        +arrows__item
+        +arrows__item
