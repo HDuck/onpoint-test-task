@@ -9,7 +9,7 @@ demo: https://youtu.be/bH9zEDcMlBA
 
 ## Ссылка на GitHub Pages
 
-hduck.github.io/onpoint-test-task/
+https://hduck.github.io/onpoint-test-task/
 
 ## Использованные технологии
 
