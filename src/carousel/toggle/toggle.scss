@@ -1,0 +1,10 @@
+.toggle {
+    position: absolute;
+    bottom: 25px;
+    right: 189px;
+    width: 640px;
+}
+
+@import './toggle__wrapper';
+@import './toggle__time';
+@import './toggle__input';

@@ -145,6 +145,7 @@
         }
     };
 
+include slider/slider
 include slide/slide
 include title/title
 include carousel/carousel
@@ -163,69 +164,72 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title #{htmlWebpackPlugin.options.title}
-    body.container
-        +slide(slideBg[0])
-            +title(titles.slide1.name, titles.slide1.size, titles.slide1.position, titles.slide1.theme)
-            +goals(slideOneGoals)
-            +next-slide
-        +slide(slideBg[1])
-            +title(titles.slide2.name, titles.slide2.size, titles.slide2.position, titles.slide2.theme)
-        +carousel(toggleDates)
-            - var tabCounter = 0;
-            +slide(slideBg[2])
-                - tabCounter++;
-                +title(titles.tab1.name, titles.tab1.size, titles.tab1.position, titles.tab1.theme)
-                +grid-layout
-                    - var elemCounter = 0;
-                    each item in tab1Elems
-                        - elemCounter++;
-                        +grid-layout__item(elemCounter)
-                            +element(item.num, item.name, item.align, item.type, item.circle)
-                                +arrows(tabCounter, elemCounter)
-                                    each item2 in tab1Arrows[`element${elemCounter}`]
-                                        if (item2.type === 'single')
-                                            +arrows__item(item2.dir, item2.len)
-                                        else if (item2.type === 'double')
-                                            +arrows__item_double(item2.dir, item2.len)
-                    +grid-layout__item(++elemCounter)
-                        +hyperglycemia('s')
-            +slide(slideBg[3])
-                - tabCounter++;
-                +title(titles.tab2.name, titles.tab2.size, titles.tab2.position, titles.tab2.theme)
-                +grid-layout
-                    - var elemCounter = 0;
-                    each item in tab2Elems
-                        - elemCounter++;
-                        +grid-layout__item(elemCounter)
-                            +element(item.num, item.name, item.align, item.type, item.circle)
-                                +arrows(tabCounter, elemCounter)
-                                    each item2 in tab2Arrows[`element${elemCounter}`]
-                                        if (item2.type === 'single')
-                                            +arrows__item(item2.dir, item2.len)
-                                        else if (item2.type === 'double')
-                                            +arrows__item_double(item2.dir, item2.len)
-                    +grid-layout__item(++elemCounter)
-                        +hyperglycemia('l')
-            +slide(slideBg[4])
-                - tabCounter++;
-                +title(titles.tab3.name, titles.tab3.size, titles.tab3.position, titles.tab3.theme)
-                +grid-layout
-                    - var elemCounter = 0;
-                    each item in tab3Elems
-                        - elemCounter++;
-                        +grid-layout__item(elemCounter)
-                            +element(item.num, item.name, item.align, item.type, item.circle)
-                                +arrows(tabCounter, elemCounter)
-                                    each item2 in tab3Arrows[`element${elemCounter}`]
-                                        if (item2.type === 'single')
-                                            +arrows__item(item2.dir, item2.len)
-                                        else if (item2.type === 'double')
-                                            +arrows__item_double(item2.dir, item2.len)
-                    +grid-layout__item(++elemCounter)
-                        +insul-resist
-                    +grid-layout__item(++elemCounter)
-                        +hyperglycemia
-        +pagination
-            +pagination__circle(true)
-            +pagination__circle(false)
-            +pagination__circle(false)
+    body
+        +slider
+            - var slidesCount = 0;
+            +slide(slideBg[0], ++slidesCount)
+                +title(titles.slide1.name, titles.slide1.size, titles.slide1.position, titles.slide1.theme)
+                +goals(slideOneGoals)
+                +next-slide
+            +slide(slideBg[1], ++slidesCount)
+                +title(titles.slide2.name, titles.slide2.size, titles.slide2.position, titles.slide2.theme)
+            +slide(_, ++slidesCount)
+                +carousel(toggleDates)
+                    - var tabCounter = 0;
+                    +slide(slideBg[2])
+                        - tabCounter++;
+                        +title(titles.tab1.name, titles.tab1.size, titles.tab1.position, titles.tab1.theme)
+                        +grid-layout
+                            - var elemCounter = 0;
+                            each item in tab1Elems
+                                - elemCounter++;
+                                +grid-layout__item(elemCounter)
+                                    +element(item.num, item.name, item.align, item.type, item.circle)
+                                        +arrows(tabCounter, elemCounter)
+                                            each item2 in tab1Arrows[`element${elemCounter}`]
+                                                if (item2.type === 'single')
+                                                    +arrows__item(item2.dir, item2.len)
+                                                else if (item2.type === 'double')
+                                                    +arrows__item_double(item2.dir, item2.len)
+                            +grid-layout__item(++elemCounter)
+                                +hyperglycemia('s')
+                    +slide(slideBg[3])
+                        - tabCounter++;
+                        +title(titles.tab2.name, titles.tab2.size, titles.tab2.position, titles.tab2.theme)
+                        +grid-layout
+                            - var elemCounter = 0;
+                            each item in tab2Elems
+                                - elemCounter++;
+                                +grid-layout__item(elemCounter)
+                                    +element(item.num, item.name, item.align, item.type, item.circle)
+                                        +arrows(tabCounter, elemCounter)
+                                            each item2 in tab2Arrows[`element${elemCounter}`]
+                                                if (item2.type === 'single')
+                                                    +arrows__item(item2.dir, item2.len)
+                                                else if (item2.type === 'double')
+                                                    +arrows__item_double(item2.dir, item2.len)
+                            +grid-layout__item(++elemCounter)
+                                +hyperglycemia('l')
+                    +slide(slideBg[4])
+                        - tabCounter++;
+                        +title(titles.tab3.name, titles.tab3.size, titles.tab3.position, titles.tab3.theme)
+                        +grid-layout
+                            - var elemCounter = 0;
+                            each item in tab3Elems
+                                - elemCounter++;
+                                +grid-layout__item(elemCounter)
+                                    +element(item.num, item.name, item.align, item.type, item.circle)
+                                        +arrows(tabCounter, elemCounter)
+                                            each item2 in tab3Arrows[`element${elemCounter}`]
+                                                if (item2.type === 'single')
+                                                    +arrows__item(item2.dir, item2.len)
+                                                else if (item2.type === 'double')
+                                                    +arrows__item_double(item2.dir, item2.len)
+                            +grid-layout__item(++elemCounter)
+                                +insul-resist
+                            +grid-layout__item(++elemCounter)
+                                +hyperglycemia
+            +pagination
+                +pagination__circle(true)
+                +pagination__circle(false)
+                +pagination__circle(false)

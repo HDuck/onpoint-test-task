@@ -1,0 +1,32 @@
+.toggle__wrapper {
+    position: relative;
+    height: 12px;
+}
+
+.toggle__bar-cont,
+.toggle__bar-prog {
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    top: 5px;
+}
+
+.toggle__bar-cont {
+    background-color: #d1eaff;
+    opacity: 0.3;
+}
+
+.toggle__bar-prog {
+    background-color: #d1eaff;
+    transition: width .25s ease-out 0s;
+}
+
+.toggle__thumb {
+    position: absolute;
+    top: -25px;
+    width: 53px;
+    height: 65px;
+    background: transparent no-repeat center/contain;
+    background-image: url('./carousel/toggle/toggle-thumb.svg');
+    transition: right .25s ease-out 0s;
+}

@@ -1,0 +1,11 @@
+.carousel {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    transition: right 1s ease 0s;
+}
+
+@import './toggle/toggle';

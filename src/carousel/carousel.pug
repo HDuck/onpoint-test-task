@@ -1,3 +1,6 @@
-mixin carousel
+include toggle/toggle
+
+mixin carousel(toggleDates)
     .carousel
         block
+    +toggle(...toggleDates)

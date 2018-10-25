@@ -1,5 +1,9 @@
-@import './container/container';
+body {
+    margin: 0;
+}
+
 @import './text/text';
+@import './slider/slider';
 @import './slide/slide';
 @import './title/title';
 @import './pagination/pagination';
@@ -10,3 +14,4 @@
 @import './arrows/arrows';
 @import './hyperglycemia/hyperglycemia';
 @import './insul-resist/insul-resist';
+@import './carousel/carousel';
