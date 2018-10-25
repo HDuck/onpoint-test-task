@@ -1,5 +1,5 @@
 .slide_bg_deepblue1 {
-    background: blue url('./slide/bg_deepblue.png') no-repeat center;
+    background: blue url('./slide/bg_deepblue.png') no-repeat center/cover;
 
     &::before {
         content: "";

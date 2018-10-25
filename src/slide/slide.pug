@@ -1,3 +1,13 @@
-mixin slide(bg)
-    section(class=`slide slide_bg_${bg}`)
-        block
+mixin slide(bg, count)
+    if (bg && count)
+        section(class=`slide slide-${count} slide_bg_${bg}`)
+            block
+    else if (count)
+        section(class=`slide slide-${count}`)
+            block
+    else if (bg)
+        section(class=`slide slide_bg_${bg}`)
+            block
+    else
+        section(class=`slide slide_bg_${bg}`)
+            block
